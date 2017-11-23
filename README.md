@@ -1,15 +1,18 @@
-## Welcome to visit haojie's personal repository
+# Welcome to visit haojie's personal repository
 
 This repository is purpose of record about personal info.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### About me
+# About me
 A Software engineer work in Shanghai, China
 
-### Interested
+# Interested
+Running
+Swimming
+...
 
-### Skills
+# Skills
 ## Application Management
 IT Service Management
 ITIL V2
@@ -49,7 +52,7 @@ SQL Server
 MySQL
 Postgresql
 ### No-SQL
-1. **Mongo**(https://www.mongodb.com)
+1. [**Mongo**](https://www.mongodb.com)
 2. _Cassandra_
 
 ## Others
@@ -57,9 +60,7 @@ Postgresql
 - Redis
 - RabbitMQ
 ```
-
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Edit with [Markdown](https://guides.github.com/features/mastering-markdown/).
+![](https://assets-cdn.github.com/images/icons/emoji/unicode/1f42b.png)
