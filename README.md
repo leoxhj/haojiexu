@@ -1,8 +1,15 @@
-## Welcome to GitHub Pages
+## Welcome to visit haojie's personal repository
 
-You can use the [editor on GitHub](https://github.com/leoxhj/haojiexu.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This repository is purpose of record about personal info.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+### About me
+A Software engineer work in Shanghai, China
+
+### Interested
+
+### Technology
 
 ### Markdown
 
