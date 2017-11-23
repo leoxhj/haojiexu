@@ -9,36 +9,57 @@ A Software engineer work in Shanghai, China
 
 ### Interested
 
-### Technology
+### Skills
+## Application Management
+IT Service Management
+ITIL V2
+Global Service Delivery
+Application Management
+Transition and Tranformation
 
-### Markdown
+## Business Process Management
+- BMC Remedy ITSM solutions
+- StackStorm
+- Airflow
+- Camanda
+- Activiti
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Programming
+Python
+Java
+Javascript
+AngularJS
 
-```markdown
-Syntax highlighted code block
+## Infrastructure
+CentOS
+Ubuntu
+CoreOS
+Solaris
+HP-UX
+Windows
+Redhat
+VMWare
+KVM
+Docker
+Kubernetes
 
-# Header 1
-## Header 2
-### Header 3
+## Database
+### RDBS
+SQL Server
+MySQL
+Postgresql
+### No-SQL
+1. **Mongo**(https://www.mongodb.com)
+2. _Cassandra_
 
-- Bulleted
-- List
+## Others
+```
+- Redis
+- RabbitMQ
+```
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/leoxhj/haojiexu.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
