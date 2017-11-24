@@ -35,7 +35,8 @@ last name: Xu (pronounced as 'shu:')
 - Activiti
 ```
 ## Programming
-```Python
+```
+- Python
 - Java
 - Javascript
 - AngularJS
