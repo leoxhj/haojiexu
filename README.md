@@ -35,13 +35,13 @@ last name: Xu (pronounced as 'shu:')
 - Activiti
 ```
 ## Programming
-```
+
 - Python
-- Java
+- [Java](Java.md)
 - Javascript
 - AngularJS
 - Scala
-```
+
 ## Infrastructure
 ### OS
 ```
