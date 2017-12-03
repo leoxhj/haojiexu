@@ -5,12 +5,12 @@
 ## 前提条件：
 
 * 准备2块以上Raspberry Pi 2， 3
-* 安装raspbian stretch系统到Raspberry Pi
+* 安装raspbian jessie系统到Raspberry Pi
 
 
-## 安装Raspbian Stretch 
+## 安装Raspbian Jessie 
 * 刷入raspbian lite到SD卡
-img下载地址： [raspbian lite](http://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2017-12-01/)
+img下载地址： [raspbian lite](http://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2017-07-05/)
 用Etcher工具 [Etcher.io](http://etcher.io) 刷入系统.
 
 * 修改主机名
@@ -41,6 +41,11 @@ $ sudo dphys-swapfile swapoff && \
 
 ```
 cgroup_enable=cpuset cgroup_enable=memory
+```
+对于部分用户如果cgroup_enable=memory未生效，请追加以下参数，问题原因请见[cgroup: Add kernel param to enable memory group
+](https://github.com/raspberrypi/linux/commit/ba742b52e5099b3ed964e78f227dc96460b5cdc0)
+```
+cgroup_memory=1
 ```
 
 * 重启（修改cmdline.txt后必须重启才能生效）
@@ -264,6 +269,3 @@ Now on the Kubernetes master remove the test deployment：
 $ kubectl delete -f function.yml
 ```
 
-### Moving on
-
-Now head back over to the tutorial and deploy OpenFaaS
