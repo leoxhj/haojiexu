@@ -10,29 +10,26 @@
 
 ## 安装Raspbian Stretch 
 * 刷入raspbian lite到SD卡
-img下载地址： [raspbian lite](https：//downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2017-12-01/)
-用Etcher工具 [Etcher.io](https：//etcher.io) 刷入系统.
+img下载地址： [raspbian lite](http://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2017-12-01/)
+用Etcher工具 [Etcher.io](http://etcher.io) 刷入系统.
 
 * 修改主机名
 使用以下命令修改主机名，比如我的master node名为leoboss1
 ```
- $ raspi-config
+$ raspi-config
 ```
 
-## 安装Kubernetes - Master node
+## 安装Kubernetes - Master && Worker node
 
-* 安装最新版本 Docker - 17.11.0-ce for Stretch
+### Master && Worker都需要以下步骤
+* 安装最新版本 Docker - 17.11.0-ce for Jessie
 
 ```
 $ curl -sSL get.docker.com | sh && \
 sudo usermod pi -aG docker
 ```
 
-* 禁用 swap
-
-对于Kubernetes 1.7以上版本，swap开启的话会有报错。
-
-关闭swap：
+* 关闭 swap - 对于Kubernetes 1.7以上版本，swap开启的话会有报错。
 
 ```
 $ sudo dphys-swapfile swapoff && \
@@ -40,21 +37,13 @@ $ sudo dphys-swapfile swapoff && \
   sudo update-rc.d dphys-swapfile remove
 ```
 
-用以下命令检查确认，无任何内容输出。
-
-```
-$ sudo swapon --summary
-```
-
-* vi `/boot/cmdline.txt`
-
-在文件末尾追加以下内容（注意：不要另起新行）
+* 修改文件 `/boot/cmdline.txt`，在文件末尾追加以下内容（注意：不要另起新行）
 
 ```
 cgroup_enable=cpuset cgroup_enable=memory
 ```
 
-* 重启
+* 重启（修改cmdline.txt后必须重启才能生效）
 ```
 $ reboot
 ```
@@ -62,16 +51,16 @@ $ reboot
 * 安装kubeadmin
 
 ```
-$ curl -s https：//packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - && \
-  echo "deb http：//apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list && \
+$ curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - && \
+  echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list && \
   sudo apt-get update -q && \
-  sudo apt-get install -qy kubeadm```
-
-
-* 初始化 master node：
+  sudo apt-get install -qy kubeadm
 
 ```
-$ sudo kubeadm init
+### Master node only
+* 初始化 master node：
+if you are using wi-fi network, you will need add below --apiserver-advertise flag
+$ sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=192.168.2.200
 ```
 
 Note： 这一步大概需要15分钟左右时间，先坐下来喝杯咖啡。
@@ -130,14 +119,19 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 You can now join any number of machines by running the following on each node
 as root:
 
-  kubeadm join --token 482c94.74f12081feff76e6 192.168.2.200:6443 --discovery-token-ca-cert-hash sha256:9fb70d328046e4ff1293c9bf269da79cf1613d5275ecc98fd695a8f30df6f170
+  kubeadm join --token f27f3d.5fa72f3473925936 192.168.2.200:6443 --discovery-token-ca-cert-hash sha256:8781001e645600a3be221a6555921493966687e01bc94d2bc10861f3af8b01e1
 
 
 ```
   mkdir -p $HOME/.kube
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  sudo chown $(id -u)：$(id -g) $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
+
+Finally, we need to setup flannel v0.7.1 as the Pod network driver. Do not use v0.8.0 due to a known bug that can cause a CrashLoopBackOff error. Run this on the master node:
+
+$ curl -sSL https://rawgit.com/coreos/flannel/v0.7.1/Documentation/kube-flannel-rbac.yml | kubectl create -f -
+$ curl -sSL https://rawgit.com/coreos/flannel/v0.7.1/Documentation/kube-flannel.yml | sed "s/amd64/arm/g" | kubectl create -f -
 
 This step takes the key generated for cluster administration and makes it available in a default location for use with `kubectl`.
 
@@ -146,8 +140,7 @@ This step takes the key generated for cluster administration and makes it availa
 Your join token is valid for 24 hours， so save it into a text file. Here's an example of mine：
 
 ```
-$ kubeadm join --token 9e700f.7dc97f5e3a45c9e5 192.168.0.27：6443 --discovery-token-ca-cert-hash sha256：95cbb9ee5536aa61ec0239d6edd8598af68758308d0a0425848ae1af28859bea
-```
+kubeadm join --token 4cd7b6.c88687d790db6e9f 192.168.2.200:6443 --discovery-token-ca-cert-hash sha256:659e484ee6c292864443428b8238cd7be73fa7a2fb4f886a9c6cc58b8b18deb1```
 
 * Check everything worked：
 
@@ -170,7 +163,7 @@ You should see the "READY" count showing as 1/1 for all services as above. DNS u
 Install Weave network driver
 
 ```
-$ kubectl apply -f https：//git.io/weave-kube-1.6
+$ kubectl apply -f https://git.io/weave-kube-1.6
 ```
 
 ### Join other nodes
@@ -185,6 +178,9 @@ Use the `raspi-config` utility to change the hostname to k8s-worker-1 or similar
 
 Replace the token / IP for the output you got from the master node：
 
+```
+### Worker node only
+* Worker node加入
 ```
 $ sudo kubeadm join --token 1fd0d8.67e7083ed7ec08f3 192.168.0.27：6443
 ```
@@ -244,7 +240,7 @@ Deploy and test：
 
 ```
 $ kubectl create -f function.yml
-$ curl -4 http：//localhost：31118 -d "# test"
+$ curl -4 http://localhost：31118 -d "# test"
 <p><h1>test</h1></p>
 ```
 
@@ -255,7 +251,7 @@ From a remote machine such as your laptop use the IP address of your Kubernetes 
 This is the development dashboard which has TLS disabled and is easier to use.
 
 ```
-$ curl -sSL https：//raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard-arm.yaml | kubectl create -f -
+$ curl -sSL http://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard-arm.yaml | kubectl create -f -
 ```
 
 You can then find the IP and port via `kubectl get svc -n kube-system`. To access this from your laptop you will need to use `kubectl proxy`.
