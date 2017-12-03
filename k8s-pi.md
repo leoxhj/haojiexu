@@ -124,7 +124,7 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 You can now join any number of machines by running the following on each node
 as root:
 
-  kubeadm join --token f27f3d.5fa72f3473925936 192.168.2.200:6443 --discovery-token-ca-cert-hash sha256:8781001e645600a3be221a6555921493966687e01bc94d2bc10861f3af8b01e1
+  kubeadm join --token 4cd7b6.c88687d790db6e9f 192.168.2.200:6443 --discovery-token-ca-cert-hash sha256:659e484ee6c292864443428b8238cd7be73fa7a2fb4f886a9c6cc58b8b18deb1
 
 
 ```
@@ -269,3 +269,7 @@ Now on the Kubernetes master remove the test deployment：
 $ kubectl delete -f function.yml
 ```
 
+
+Reference
+* [Setup Kubernetes on a Raspberry Pi Cluster easily the official way!](https://blog.hypriot.com/post/setup-kubernetes-raspberry-pi-cluster/)
+* [How to Build a Kubernetes Cluster with ARM Raspberry Pi then run .NET Core on OpenFaas](https://www.hanselman.com/blog/HowToBuildAKubernetesClusterWithARMRaspberryPiThenRunNETCoreOnOpenFaas.aspx)
