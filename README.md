@@ -55,17 +55,17 @@ last name: Xu (pronounced as 'shu:')
 - Raspberry Pi
 ```
 ### Visualization
-```
+
 - VMWare
 - Virtual Box
 - Vagrant
 - KVM
 - RKT
 - Docker
-- Kubernetes
+- Kubernetes, [k8s-raspi](k8s-pi.md)
 - Mesos
 - Marathon
-```
+
 ## Database
 ### RDBS
 ```
