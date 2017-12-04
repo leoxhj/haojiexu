@@ -2,19 +2,7 @@
 
 This repository is the purpose of recording something about myself.
   
-# About me
-```
-A Software engineer work in Shanghai, China
-western name: Leo
-first name: Haojie
-last name: Xu (pronounced as 'shu:')
-```
-
-# Interested
-```
-- Running
-- Swimming
-```
+My name is Haojie Xu. I'm a programmer. I work out in Shanghai, China for the Sysdev team at Ctrip. I blog about technology, culture, gadgets, diversity, code, the web, where we're going and where we've been. I'm excited about community, social equity, media, entrepreneurship and above all, the open web.
 
 # Skills
 ## Application Management
