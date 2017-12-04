@@ -43,17 +43,17 @@ My name is Haojie Xu. I'm a programmer. I work out in Shanghai, China for the Sy
 - Raspberry Pi
 ```
 ### Visualization
-```
+
 - VMWare
 - Virtual Box
 - Vagrant
 - KVM
 - RKT
 - Docker
-- Kubernetes
+- Kubernetes, [k8s-raspi](k8s-pi.md)
 - Mesos
 - Marathon
-```
+
 ## Database
 ### RDBS
 ```
