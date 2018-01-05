@@ -51,26 +51,25 @@ My name is Haojie Xu (Leo). I'm a programmer. I work out in Shanghai, China for 
 * MySQL
 * Oracle
 * Postgres
-* Mongo
+* [Mongo](Mongo.md)
 * Cassandra
 * InfluxDB
 
 ## Untitled
 * Redis, Memcached
-* RabbitMQ
-* Kafka
+* RabbitMQ, Active MQ, Kafka
 * Github, Confluence, Jira
 * IDE: {'WebStorm', 'IntellJ IDEA', 'PyCharm'}
 * Testing: {'Postman', 'SoapUI'}
-* Jenkins
-* Nginx
+* Jenkins, Ansible, Deploybot, Salt
+* Nginx, Tomcat, Flask
 * Framework: {'Django', 'BlueAdmin', ...}
 * Monitoring: {'Zabbix', 'Hickwall', 'ElasticSearch', 'LogStach'}
 * Open Source: {'OpenStack'}
 * Big Data
 * AI
 * Machine learn
-* Tensorflow
+* TensorFlow
 * Top companies {'Google', 'Apple', 'Facebook', 'Amazon', 'Twitter', 'Netflix', 'Alibaba', 'Tencent', 'Baidu'...}
 * IOS, Android
 
