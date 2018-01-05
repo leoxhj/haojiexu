@@ -1,8 +1,6 @@
 # Welcome to visit haojie's personal repository
 
-This repository is the purpose of recording something about myself.
-  
-My name is Haojie Xu. I'm a programmer. I work out in Shanghai, China for the Sysdev team at Ctrip. I blog about technology, culture, gadgets, diversity, code, the web, where we're going and where we've been. I'm excited about community, social equity, media, entrepreneurship and above all, the open web.
+My name is Haojie Xu (Leo). I'm a programmer. I work out in Shanghai, China for the Sysdev team at Ctrip. I blog about technology, culture, gadgets, diversity, code, the web, where we're going and where we've been. I'm excited about community, social equity, media, entrepreneurship and above all, the open web.
 
 # Skills
 ## Application Management
@@ -10,7 +8,7 @@ My name is Haojie Xu. I'm a programmer. I work out in Shanghai, China for the Sy
 * ITIL V2
 * Global Service Delivery
 * Application Management
-* Transition and Tranformation
+* Transition and Transformation
 
 ## Business Process Management
 * BMC Remedy ITSM solutions
@@ -75,6 +73,9 @@ My name is Haojie Xu. I'm a programmer. I work out in Shanghai, China for the Sy
 * Tensorflow
 * Top companies {'Google', 'Apple', 'Facebook', 'Amazon', 'Twitter', 'Netflix', 'Alibaba', 'Tencent', 'Baidu'...}
 * IOS, Android
+
+### Linux tools
+NetCat(nc), szrz, 
 
 
 Editor:[Markdown](https://guides.github.com/features/mastering-markdown/).
