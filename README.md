@@ -25,6 +25,7 @@ My name is Haojie Xu. I'm a programmer. I work out in Shanghai, China for the Sy
 * [Java](Java.md)
 * Javascript
 * AngularJS
+* Scala
 
 ## Infrastructure
 ### OS
@@ -60,6 +61,7 @@ My name is Haojie Xu. I'm a programmer. I work out in Shanghai, China for the Sy
 ## Untitled
 * Redis, Memcached
 * RabbitMQ
+* ActiveMQ
 * Kafka
 * Github, Confluence, Jira
 * IDE: {'WebStorm', 'IntellJ IDEA', 'PyCharm'}

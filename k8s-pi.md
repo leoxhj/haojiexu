@@ -4,8 +4,8 @@
 
 ## 前提条件：
 
-* 准备2块以上Raspberry Pi 2， 3
-* 安装raspbian jessie系统到Raspberry Pi
+* 准备3+Raspberry Pi 2 or 3
+* 安装raspbian jessie
 
 
 ## 安装Raspbian Jessie 
@@ -145,7 +145,7 @@ This step takes the key generated for cluster administration and makes it availa
 Your join token is valid for 24 hours， so save it into a text file. Here's an example of mine：
 
 ```
-kubeadm join --token 4cd7b6.c88687d790db6e9f 192.168.2.200:6443 --discovery-token-ca-cert-hash sha256:659e484ee6c292864443428b8238cd7be73fa7a2fb4f886a9c6cc58b8b18deb1```
+
 
 * Check everything worked：
 
