@@ -53,6 +53,8 @@ My name is Haojie Xu (Leo). I'm a programmer. I work out in Shanghai, China for 
 * Postgres
 * [Mongo](Mongo.md)
 * Cassandra
+* HBase
+* Hadoop
 * InfluxDB
 
 ## Untitled
@@ -70,7 +72,7 @@ My name is Haojie Xu (Leo). I'm a programmer. I work out in Shanghai, China for 
 * AI
 * Machine learn
 * TensorFlow
-* Top companies {'Google', 'Apple', 'Facebook', 'Amazon', 'Twitter', 'Netflix', 'Alibaba', 'Tencent', 'Baidu'...}
+* Top companies {'Google', 'Apple', 'Facebook', 'Amazon', 'Twitter', 'Netflix', 'Alibaba', 'Tencent'}
 * IOS, Android
 
 ### Linux tools
