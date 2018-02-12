@@ -23,6 +23,7 @@ My name is Haojie Xu (Leo). I'm a programmer. I work out in Shanghai, China for 
 * [Java](Java.md)
 * Javascript
 * AngularJS
+* Scala
 
 ## Infrastructure
 ### OS
