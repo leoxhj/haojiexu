@@ -13,7 +13,7 @@ My name is Haojie Xu (Leo). I'm a programmer. I work out in Shanghai, China for 
 ## Business Process Management
 * BMC Remedy ITSM solutions
 * Service Now
-* StackStorm
+* [StackStorm](Stackstorm.md)
 * Airflow
 * Camunda
 * Activiti
@@ -27,6 +27,7 @@ My name is Haojie Xu (Leo). I'm a programmer. I work out in Shanghai, China for 
 
 ## Infrastructure
 ### OS
+* [Linux](Linux.md)
 * CentOS
 * Ubuntu
 * Debian
@@ -39,7 +40,7 @@ My name is Haojie Xu (Leo). I'm a programmer. I work out in Shanghai, China for 
 ### Visualization
 * VMWare
 * Virtual Box
-* Vagrant
+* [Vagrant](Vagrant.md)
 * KVM
 * RKT
 * Docker, Docker Swarm
