@@ -11,4 +11,8 @@ TBD
 `db.action_execution_d_b.find({}).count()`
 
 
+# Remove
+1. delete all documents from a collection
+`db.action_execution_d_b.remove({})`
+
 
