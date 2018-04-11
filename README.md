@@ -81,6 +81,9 @@ My name is Haojie Xu (Leo). I'm a programmer. I work out in Shanghai, China for 
 NetCat(nc), szrz, 
 
 
+### Child education
+[eduction](Education.md)
+
 Editor:[Markdown](https://guides.github.com/features/mastering-markdown/).
 ![](https://assets-cdn.github.com/images/icons/emoji/unicode/1f42b.png)
 
