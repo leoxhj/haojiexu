@@ -64,11 +64,11 @@ My name is Haojie Xu (Leo). I'm a programmer. I work out in Shanghai, China for 
 * RabbitMQ, Active MQ, Kafka
 * Github, Confluence, Jira
 * IDE: {'WebStorm', 'IntellJ IDEA', 'PyCharm'}
-* Testing: {'Postman', 'SoapUI'}
+* Testing: {'Postman', 'SoapUI', 'Apache JMeter'}
 * Jenkins, Ansible, Deploybot, Salt
 * Nginx, Tomcat, Flask
 * Framework: {'Django', 'BlueAdmin', ...}
-* Monitoring: {'Zabbix', 'Hickwall', 'ElasticSearch', 'LogStach'}
+* Monitoring: {'Zabbix', 'Hickwall', 'ElasticSearch', 'LogStash'}
 * Open Source: {'OpenStack'}
 * Big Data
 * AI
@@ -77,8 +77,12 @@ My name is Haojie Xu (Leo). I'm a programmer. I work out in Shanghai, China for 
 * Top companies {'Google', 'Apple', 'Facebook', 'Amazon', 'Twitter', 'Netflix', 'Alibaba', 'Tencent'}
 * IOS, Android
 
-### Linux tools
-NetCat(nc), szrz, 
+### tools
+```
+NetCat(nc)
+szrz
+mRemoteNG - Multi-Remote Next Generation, support Protocols: SSH2, RDP
+``` 
 
 
 ### Child education
