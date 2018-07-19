@@ -50,7 +50,7 @@ My name is Haojie Xu (Leo). I'm a programmer. I work out in Shanghai, China for 
 
 ## Database
 * SQL Server
-* MySQL
+* [MySQL](Mysql.md)
 * Oracle
 * Postgres
 * [Mongo](Mongo.md)
