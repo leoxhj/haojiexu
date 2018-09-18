@@ -82,6 +82,9 @@ My name is Haojie Xu (Leo). I'm a programmer. I work out in Shanghai, China for 
 NetCat(nc)
 szrz
 mRemoteNG - Multi-Remote Next Generation, support Protocols: SSH2, RDP
+haproxy
+hfs - HTTP File System
+Everything - Locate files and folders by name instantly.
 ``` 
 
 

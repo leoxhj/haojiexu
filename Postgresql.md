@@ -1,10 +1,6 @@
-# Mongo Note
+# Postgresql Note
 
 TBD
-
-# Connections
-mongo ip:port/dbName -u user -p password
-mongo 10.25.154.4:27017/admin -u mongo -p mongo
   
 # Query examples
 1. query last document
@@ -17,12 +13,6 @@ mongo 10.25.154.4:27017/admin -u mongo -p mongo
 
 # Remove
 1. delete all documents from a collection
-
 `db.action_execution_d_b.remove({})`
 
-
-# Security 
-1. Built-in Roles
-
-`dbAdmin, dbOwner(readWrite+dbAdmin+userAdmin), userAdmin, clusterAdmin, clusterManager,clusterMonitor`
 

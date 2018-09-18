@@ -5,6 +5,7 @@ TBD
 # Basic Commands
  ```
  mysql -u root -p123abc
+ mysql -h 192.168.2.102 -u root -p123abc
  
 Warning: Using a password on the command line interface can be insecure.
 ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
