@@ -85,6 +85,7 @@ mRemoteNG - Multi-Remote Next Generation, support Protocols: SSH2, RDP
 haproxy
 hfs - HTTP File System
 Everything - Locate files and folders by name instantly.
+BareTail
 ``` 
 
 
