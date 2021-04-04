@@ -3,9 +3,9 @@ entries:
   paas-java-demo:
   - apiVersion: v1
     appVersion: 5.2.0
-    created: "2021-04-04T18:59:22.753495309+08:00"
+    created: "2021-04-04T19:13:53.812672406+08:00"
     description: paas-java-demo Helm chart for Kubernetes
-    digest: 39df1a6816cfd009bae7108fc1088326d6a87998d1e496426dd13adb475c5149
+    digest: d2b1d4a32ebf0a59f7f45f7db1645685912d9ac39fbaa3dcde907e3373dc2b92
     home: https://leoxhj.github.io/paas-java-demo
     maintainers:
     - email: leoxhj@users.noreply.github.com
@@ -16,4 +16,4 @@ entries:
     urls:
     - paas-java-demo-5.2.0.tgz
     version: 5.2.0
-generated: "2021-04-04T18:59:22.75030267+08:00"
+generated: "2021-04-04T19:13:53.809760397+08:00"
