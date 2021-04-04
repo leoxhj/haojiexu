@@ -1,9 +1,9 @@
-# Podinfo
+# paas-java-demo
 
-Podinfo is a tiny web application made with Go 
+paas-java-demo is a tiny web application made with Go 
 that showcases best practices of running microservices in Kubernetes.
 
-Podinfo is used by CNCF projects like [Flux](https://github.com/fluxcd/flux2)
+paas-java-demo is used by CNCF projects like [Flux](https://github.com/fluxcd/flux2)
 and [Flagger](https://github.com/fluxcd/flagger)
 for end-to-end testing and workshops.
 
@@ -12,12 +12,12 @@ for end-to-end testing and workshops.
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm repo add podinfo https://stefanprodan.github.io/podinfo
+$ helm repo add paas-java-demo https://leoxhj.github.io/paas-java-demo
 
-$ helm upgrade -i my-release podinfo/podinfo 
+$ helm upgrade -i my-release paas-java-demo/paas-java-demo 
 ```
 
-The command deploys podinfo on the Kubernetes cluster in the default namespace.
+The command deploys paas-java-demo on the Kubernetes cluster in the default namespace.
 The [configuration](#configuration) section lists the parameters that can be configured during installation.
 
 ## Uninstalling the Chart
@@ -32,7 +32,7 @@ The command removes all the Kubernetes components associated with the chart and 
 
 ## Configuration
 
-The following tables lists the configurable parameters of the podinfo chart and their default values.
+The following tables lists the configurable parameters of the paas-java-demo chart and their default values.
 
 Parameter | Default | Description
 --- | --- | ---
@@ -51,7 +51,7 @@ Parameter | Default | Description
 `faults.unready` | `false` | When set, the ready state is never reached
 `faults.testFail` | `false` | When set, a helm test is included which always fails
 `faults.testTimeout` | `false` | When set, a helm test is included which always times out
-`image.repository` | `stefanprodan/podinfo` | Image repository
+`image.repository` | `leoxhj/paas-java-demo` | Image repository
 `image.tag` | `<VERSION>` | Image tag
 `image.pullPolicy` | `IfNotPresent` | Image pull policy
 `service.enabled` | `true` | Create a Kubernetes Service, should be disabled when using [Flagger](https://flagger.app)
@@ -60,7 +60,7 @@ Parameter | Default | Description
 `service.httpPort` | `9898` | Container HTTP port
 `service.externalPort` | `9898` | ClusterIP HTTP port
 `service.grpcPort` | `9999` | ClusterIP gPRC port
-`service.grpcService` | `podinfo` | gPRC service name
+`service.grpcService` | `paas-java-demo` | gPRC service name
 `service.nodePort` | `31198` | NodePort for the HTTP endpoint
 `h2c.enabled` | `false` | Allow upgrading to h2c (non-TLS version of HTTP/2)
 `hpa.enabled` | `false` | Enables the Kubernetes HPA
@@ -70,7 +70,7 @@ Parameter | Default | Description
 `hpa.requests` | `None` | Target HTTP requests per second per pod
 `serviceAccount.enabled` | `false` | Whether a service account should be created
 `serviceAccount.name` | `None` | The name of the service account to use, if not set and create is true, a name is generated using the fullname template
-`securityContext` | `{}` | The security context to be set on the podinfo container
+`securityContext` | `{}` | The security context to be set on the paas-java-demo container
 `linkerd.profile.enabled` | `false` | Create Linkerd service profile
 `serviceMonitor.enabled` | `false` | Whether a Prometheus Operator service monitor should be created
 `serviceMonitor.interval` | `15s` | Prometheus scraping interval
@@ -91,21 +91,21 @@ Parameter | Default | Description
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
 ```console
-$ helm install my-release podinfo/podinfo \
+$ helm install my-release paas-java-demo/paas-java-demo \
   --set=serviceMonitor.enabled=true,serviceMonitor.interval=5s
 ```
 
 To add custom annotations you need to escape the annotation key string:
 
 ```console
-$ helm upgrade -i my-release podinfo/podinfo \
+$ helm upgrade -i my-release paas-java-demo/paas-java-demo \
 --set podAnnotations."appmesh\.k8s\.aws\/preview"=enabled
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart. For example,
 
 ```console
-$ helm install my-release podinfo/podinfo -f values.yaml
+$ helm install my-release paas-java-demo/paas-java-demo -f values.yaml
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
