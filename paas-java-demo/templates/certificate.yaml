@@ -1,0 +1,16 @@
+{{- if .Values.certificate.create -}}
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: {{ template "paas-java-demo.fullname" . }}
+  labels:
+    {{- include "paas-java-demo.labels" . | nindent 4 }}
+spec:
+  dnsNames:
+  {{- range .Values.certificate.dnsNames }}
+    - {{ . | quote }}
+  {{- end }}
+  secretName: {{ template "paas-java-demo.tlsSecretName" . }}
+  issuerRef:
+  {{- .Values.certificate.issuerRef | toYaml | trimSuffix "\n" | nindent 4 }}
+{{- end }}
