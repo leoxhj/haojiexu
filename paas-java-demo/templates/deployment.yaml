@@ -47,43 +47,7 @@ spec:
                 - NET_BIND_SERVICE
           {{- end }}
           command:
-            - ./paas-java-demo
-            - --port={{ .Values.service.httpPort | default 9898 }}
-            {{- if .Values.tls.enabled }}
-            - --secure-port={{ .Values.tls.port }}
-            {{- end }}
-            {{- if .Values.tls.certPath }}
-            - --cert-path={{ .Values.tls.certPath }}
-            {{- end }}
-            {{- if .Values.service.metricsPort }}
-            - --port-metrics={{ .Values.service.metricsPort }}
-            {{- end }}
-            {{- if .Values.service.grpcPort }}
-            - --grpc-port={{ .Values.service.grpcPort }}
-            {{- end }}
-            {{- if .Values.service.grpcService }}
-            - --grpc-service-name={{ .Values.service.grpcService }}
-            {{- end }}
-            {{- range .Values.backends }}
-            - --backend-url={{ . }}
-            {{- end }}
-            {{- if .Values.cache }}
-            - --cache-server={{ .Values.cache }}
-            {{- else if .Values.redis.enabled }}
-            - --cache-server={{ template "paas-java-demo.fullname" . }}-redis:6379
-            {{- end }}
-            - --level={{ .Values.logLevel }}
-            - --random-delay={{ .Values.faults.delay }}
-            - --random-error={{ .Values.faults.error }}
-            {{- if .Values.faults.unhealthy }}
-            - --unhealthy
-            {{- end }}
-            {{- if .Values.faults.unready }}
-            - --unready
-            {{- end }}
-            {{- if .Values.h2c.enabled }}
-            - --h2c
-            {{- end }}
+            - sh "hello, world!"
           env:
           {{- if .Values.ui.message }}
           - name: paas-java-demo_UI_MESSAGE
